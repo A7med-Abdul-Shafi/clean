@@ -43,7 +43,6 @@ export const submitFormValues = async (
     toast.success(successMessage, {
       position: "top-right",
       richColors: true,
-      duration: 3000,
     });
 
     form.reset();
