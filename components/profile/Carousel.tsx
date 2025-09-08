@@ -25,7 +25,7 @@ export default function AutoCarousel() {
   }, [language]);
   const slides: Slide[] = [
     {
-      src: "/images/image2.jpg",
+      src: "/images/image1.jpg",
       alt: `${t.swipper1Text}`,
       caption: `${t.swipper1Text}`,
     },
@@ -35,7 +35,7 @@ export default function AutoCarousel() {
       caption:`${t.swipper2Text}`,
     },
     {
-      src: "/images/image1.jpg",
+      src: "/images/image3.jpg",
       alt: `${t.swipper3Text}`,
       caption: `${t.swipper3Text}`,
     },

@@ -10,7 +10,7 @@ const withPWA = nextPWA({
 const nextConfig: NextConfig = {
   output: "export",
   images: {
-    unoptimized: true, // Disable image optimization
+    unoptimized: true, 
   },
   reactStrictMode: true,
   turbopack: {
