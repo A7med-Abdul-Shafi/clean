@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /private
+
+# Host
+Host: https://cleaners.sbg-camps.com
+
+# Sitemaps
+Sitemap: https://cleaners.sbg-camps.com/sitemap.xml

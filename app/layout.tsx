@@ -4,7 +4,6 @@ import "./globals.css";
 import { LanguageProvider } from "@/lib/contexts/LanguageContext";
 import { Toaster } from "sonner";
 import ServiceWorkerRegister from "../components/ServiceWorkerRegister";
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -16,21 +15,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "افضل شركة تنظيف منازل في الإمارات | كلينرز",
-  description:
-    "خدمات تنظيف احترافية في جميع إمارات الإمارات العربية المتحدة. احصل على تنظيف منزلك أو مكتبك بسرعة وسهولة مع كلينرز.",
+  title: "افضل شركة نظافة في الإمارات | كلينرز",
+  description: "خدمات نظافة احترافية في جميع إمارات الإمارات العربية المتحدة.",
   keywords: [
-    "تنظيف منازل الإمارات",
-    "شركة تنظيف أبو ظبي",
-    "شركة تنظيف دبي",
-    "شركة تنظيف الشارقة",
-    "شركة تنظيف عجمان",
-    "شركة تنظيف رأس الخيمة",
-    "شركة تنظيف أم القيوين",
-    "شركة تنظيف الفجيرة",
-    "خدمات التنظيف",
+    "نظافة منازل الإمارات",
+    "شركة نظافة أبو ظبي",
+    "شركة نظافة دبي",
+    "شركة نظافة الشارقة",
+    "شركة نظافة عجمان",
+    "شركة نظافة رأس الخيمة",
+    "شركة نظافة أم القيوين",
+    "شركة نظافة الفجيرة",
+    "خدمات النظافة",
     "كلينرز",
-    "تنظيف مكاتب",
+    "نظافة مكاتب",
     "مكافحة الحشرات",
   ],
   authors: [{ name: "Cleaners UAE", url: "https://cleaners.sbg-camps.com" }],
@@ -39,33 +37,31 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://cleaners.sbg-camps.com",
     languages: {
-      ar: "https://cleaners.sbg-camps.com/ar",
-      en: "https://cleaners.sbg-camps.com/en",
+      ar: "https://cleaners.sbg-camps.com",
+      en: "https://cleaners.sbg-camps.com",
     },
   },
   openGraph: {
     title: "افضل شركة تنظيف منازل في الإمارات | كلينرز",
-    description:
-      "نقدم خدمات تنظيف وتعقيم ومكافحة الحشرات في دبي، أبو ظبي، الشارقة، عجمان، رأس الخيمة، أم القيوين، والفجيرة. احجز الآن بسهولة عبر الإنترنت.",
+    description: "نقدم خدمات تنظيف وتعقيم.",
     url: "https://cleaners.sbg-camps.com",
     siteName: "كلينرز الإمارات",
-    locale: "ar_AE",
+    // locale: "ar_AE",
     type: "website",
     images: [
       {
-        url: "https://cleaners.ae/og-image.jpg",
+        url: "https://cleaners.sbg-camps.com/favicon.png", 
         width: 1200,
         height: 630,
-        alt: "شركة تنظيف منازل في الإمارات",
+        alt: "افضل شركة تنظيف منازل في الإمارات",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "افضل شركة تنظيف منازل في الإمارات | كلينرز",
-    description:
-      "خدمات تنظيف احترافية في جميع إمارات الدولة. احجز الآن مع كلينرز.",
-    images: ["https://cleaners.ae/twitter-card.jpg"],
+    description: "خدمات تنظيف احترافية.",
+    images: ["https://cleaners.sbg-camps.com/favicon.png"], 
   },
   robots: {
     index: true,
@@ -75,7 +71,6 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#ffffff",
   width: "device-width",
   initialScale: 1,
 };
@@ -90,14 +85,14 @@ export default function RootLayout({
       <html lang="ar">
         <head>
           <link rel="manifest" href="/manifest.json" />
-          <meta name="theme-color" content="#ffffff" />
+          <meta name="google-site-verification" content="B7CuGPH17sk5qYLHty3FPNjD4Wm1e18lCsbo3XuDLik" />
           <link rel="icon" type="image/png" href="/favicon.png" />
-          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+          <meta name="description" content="خدمات نظافة احترافية في جميع إمارات الإمارات العربية المتحدة." />
+          <meta name="keywords" content="نظافة, تنظيف, خدمات, كلينرز" />
         </head>
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
           <ServiceWorkerRegister />
           <main>{children}</main>
           <Toaster />

@@ -29,7 +29,7 @@ export default function Navbar() {
   return (
     <header
       dir={parentDir}
-      className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50"
+      className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-[999] overflow-x-clip"
     >
       <div className="container mx-auto px-4 py-3 sm:py-4 flex items-center justify-between">
         {/* Logo */}
@@ -39,7 +39,7 @@ export default function Navbar() {
           }`}
         >
           <ClipboardList className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600" />
-          <span className="text-xl sm:text-2xl font-bold text-gray-900">
+          <span className="text-[1rem] md:text-xl font-bold text-gray-900">
             Company name
           </span>
         </div>

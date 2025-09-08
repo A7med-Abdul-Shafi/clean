@@ -67,7 +67,7 @@ const Contact: React.FC = () => {
     <div className="bg-[#000814] font-semibold" dir={parentDir}>
       <div className="flex flex-col md:flex-row h-full items-center justify-around container mx-auto p-6 w-full gap-3 py-32">
         <div className="flex flex-col items-center justify-center mb-32 gap-6">
-          <h1 className="text-4xl  text-white">{t.title}</h1>
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl  text-white">{t.title}</h1>
           <p className="text-center text-white mt-2">{t.description}</p>
         </div>
         <Form {...form}>

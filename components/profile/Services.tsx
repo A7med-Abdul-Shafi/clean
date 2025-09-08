@@ -22,24 +22,52 @@ export default function Services() {
 
   return (
     <div
-      className="min-h-screen font-semibold bg-gradient-to-b from-blue-100 via-white to-purple-50"
+      className="min-h-screen font-semibold bg-gradient-to-b from-blue-50 via-white to-purple-50"
       dir={parentDir}
       id="about"
     >
-      {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20 text-center w-full">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight rounded-lg p-4">
-            {t.heroTitle}
-          </h1>
-          <div dir="ltr" className="mb-4 flex justify-center items-center gap-2">
+      <div
+        className={`fixed bottom-6 right-6 ${
+          language === "ar" ? "" : ""
+        } z-[999] flex flex-col gap-4`}
+      >
+        <a
+          href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+            t.whatsappMessage
+          )}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center justify-center transition duration-300"
+          aria-label="WhatsApp"
+        >
+          <MessageCircle className="h-6 w-6" />
+        </a>
 
-          <FlipWords
-            words={words.map(word => word.toUpperCase())}
-            className="text-blue-600 text-2xl md:text-3xl font-semibold"
-            duration={2000}
+        <a
+          href={`tel:${mobileNumber}`}
+          className="bg-blue-500 hover:bg-blue-600 text-white p-4 rounded-full shadow-lg flex items-center justify-center transition duration-300"
+          aria-label="Call"
+        >
+          <Phone className="h-6 w-6" />
+        </a>
+      </div>
+
+      {/* Hero Section */}
+      <section className="container mx-auto px-4 py-12 text-center w-full">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-6 leading-tight rounded-lg p-4">
+            {t.heroTitle}
+          </h2>
+          <div
+            dir="ltr"
+            className="mb-4 flex justify-center items-center gap-2"
+          >
+            <FlipWords
+              words={words.map((word) => word.toUpperCase())}
+              className="text-blue-600 text-[1.1rem] md:text-2xl font-semibold"
+              duration={2000}
             />
-            </div>
+          </div>
         </div>
         <p
           dir={parentDir}
@@ -78,10 +106,10 @@ export default function Services() {
       {/* Features Section */}
       <section className="container mx-auto px-4 py-20" id="services">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
             {t.featuresTitle}
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-[1rem] sm:text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto">
             {t.featuresDesc}
           </p>
         </div>
@@ -113,10 +141,10 @@ export default function Services() {
       {/* CTA Section */}
       <section className="bg-blue-600 py-20 rounded-tl-[4rem] rounded-tr-[4rem]">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4">
             {t.ctaTitle}
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-2xl md:text-3xl text-blue-100 mb-8 max-w-2xl mx-auto">
             {t.ctaDesc}
           </p>
         </div>
@@ -127,9 +155,10 @@ export default function Services() {
         className="container mx-auto px-4 py-16 text-center"
         id="contact"
       >
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-6 leading-snug tracking-tight">
           {t.contactUs}
         </h2>
+
         <p className="text-lg text-gray-700 mb-4 flex items-center justify-center gap-2">
           <Phone className="h-5 w-5 text-blue-600" />
           {t.callUs}{" "}

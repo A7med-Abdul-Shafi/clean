@@ -95,6 +95,9 @@ export const translations = {
     trialBtn: "Start your trial",
     footerNote: "© 2024 Company name. All rights reserved.",
     footerTech: "Built with Next.js",
+    swipper1Text: "Best Home Cleaning Company",
+    swipper2Text: "The Best Prices and Highest Possible Quality",
+    swipper3Text: "Extensive Experience in All Areas of Cleaning, Sanitization, and Pest Control",
     features: [
       {
         icon: CheckSquare,
@@ -164,6 +167,9 @@ export const translations = {
     trialBtn: "ابدأ تجربتك",
     footerNote: "© 2024 Company name. جميع الحقوق محفوظة.",
     footerTech: "تم البناء باستخدام Next.js",
+    swipper1Text: "افضل شركة تنظيف منازل",
+    swipper2Text: "أفضل الأسعار وأعلى جودة ممكنة",
+    swipper3Text: "خبرة طويلة في كافة مجالات التنظيف والتعقيم ومكافحة الحشرات",
     features: [
       {
         icon: CheckSquare,

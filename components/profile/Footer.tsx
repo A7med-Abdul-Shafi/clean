@@ -19,11 +19,10 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
               <ClipboardList className="h-6 w-6 text-blue-400" />
-              <span className="text-xl font-bold">Company name</span>
+              <span className="text-[1rem] md:text-xl font-bold">Company name</span>
             </div>
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <span>{t.footerNote}</span>
-              <span>{t.footerTech}</span>
             </div>
           </div>
         </div>

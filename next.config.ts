@@ -9,8 +9,24 @@ const withPWA = nextPWA({
 
 const nextConfig: NextConfig = {
   output: "export",
+  images: {
+    unoptimized: true, // Disable image optimization
+  },
   reactStrictMode: true,
-  // other Next.js config options
+  turbopack: {
+    rules: {
+      "*.svg": {
+        loaders: [
+          {
+            loader: "@svgr/webpack",
+            options: { icon: true },
+          },
+        ],
+        as: "*.js",
+      },
+    },
+    resolveExtensions: [".tsx", ".ts", ".jsx", ".js", ".json", ".svg"],
+  },
 }
 
 export default withPWA(nextConfig)
